@@ -22,6 +22,7 @@ export const DEFAULT_BRANDS: BrandItem[] = [
   { name: "Ramraj", image: "/brands/ramraj.png", url: "#" },
   { name: "VIP", image: "/brands/vip.png", url: "#" },
   { name: "Alfa", image: "/brands/alfa.png", url: "#" },
+  { name: "Go Colors", image: "/brands/gocolors.png", url: "#" },
 ];
 
 /**
@@ -170,6 +171,32 @@ function renderBrandLogo(name: string) {
           <path d="M 11 6 Q 14 14 11 22" stroke="white" strokeWidth="0.8" fill="none" />
           <text x="26" y="20" fontFamily="Georgia, Cambria, serif" fontStyle="italic" fontWeight="bold" fontSize="21" fill="#dc2626" letterSpacing="0.5">alfa</text>
           <text x="27" y="28" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="bold" fontSize="6.5" fill="#4b5563" letterSpacing="0.2">The Real Beauty</text>
+        </svg>
+      );
+
+    case "go colors":
+    case "gocolors":
+    case "go colors!":
+      return (
+        <svg viewBox="0 0 170 40" fill="none" className="w-[125px] h-[30px]">
+          <text
+            x="0"
+            y="28"
+            fontFamily="Arial, Helvetica, sans-serif"
+            fontStyle="italic"
+            fontWeight="900"
+            fontSize="26"
+            fill="#000000"
+            letterSpacing="-0.5"
+          >
+            GO COLORS
+          </text>
+          <g transform="translate(142, 4) rotate(8)">
+            <path d="M 1 0 L 11 0 L 9.5 8 L 2.5 8 Z" fill="#ec4899" />
+            <path d="M 2.5 8 L 9.5 8 L 8 16 L 4 16 Z" fill="#2563eb" />
+            <path d="M 4 16 L 8 16 L 7 21 L 5 21 Z" fill="#facc15" />
+            <circle cx="6" cy="27" r="4" fill="#84cc16" />
+          </g>
         </svg>
       );
 
