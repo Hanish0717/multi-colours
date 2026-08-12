@@ -1,0 +1,376 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --color-app-accent: var(--app-accent);
+  --color-app-accent-foreground: var(--app-accent-foreground);
+  --color-web-accent: var(--web-accent);
+  --color-web-accent-foreground: var(--web-accent-foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: dark;
+  --background: oklch(0.14 0.025 285);
+  --foreground: oklch(0.97 0.005 285);
+  --card: oklch(0.2 0.02 285 / 55%);
+  --card-foreground: oklch(0.97 0.005 285);
+  --popover: oklch(0.2 0.02 285);
+  --popover-foreground: oklch(0.97 0.005 285);
+  --primary: oklch(0.62 0.24 320);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.24 0.02 285);
+  --secondary-foreground: oklch(0.97 0.005 285);
+  --muted: oklch(0.26 0.02 285);
+  --muted-foreground: oklch(0.68 0.02 285);
+  --accent: oklch(0.26 0.02 285);
+  --accent-foreground: oklch(0.97 0.005 285);
+  --destructive: oklch(0.62 0.22 25);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.62 0.24 320);
+  /* App CTA — magenta → purple */
+  --app-accent: oklch(0.62 0.24 320);
+  --app-accent-2: oklch(0.5 0.24 300);
+  --app-accent-foreground: oklch(0.99 0 0);
+  /* Web CTA — cyan → blue */
+  --web-accent: oklch(0.72 0.14 200);
+  --web-accent-2: oklch(0.6 0.16 240);
+  --web-accent-foreground: oklch(0.99 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  color-scheme: dark;
+  --background: oklch(0.14 0.025 285);
+  --foreground: oklch(0.97 0.005 285);
+  --card: oklch(0.2 0.02 285 / 55%);
+  --card-foreground: oklch(0.97 0.005 285);
+  --popover: oklch(0.2 0.02 285);
+  --popover-foreground: oklch(0.97 0.005 285);
+  --primary: oklch(0.62 0.24 320);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.24 0.02 285);
+  --secondary-foreground: oklch(0.97 0.005 285);
+  --muted: oklch(0.26 0.02 285);
+  --muted-foreground: oklch(0.68 0.02 285);
+  --accent: oklch(0.26 0.02 285);
+  --accent-foreground: oklch(0.97 0.005 285);
+  --destructive: oklch(0.62 0.22 25);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.62 0.24 320);
+  --app-accent: oklch(0.62 0.24 320);
+  --app-accent-2: oklch(0.5 0.24 300);
+  --app-accent-foreground: oklch(0.99 0 0);
+  --web-accent: oklch(0.72 0.14 200);
+  --web-accent-2: oklch(0.6 0.16 240);
+  --web-accent-foreground: oklch(0.99 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ---------- MultiColours motion system ---------- */
+/* Soft, natural easing used across the page */
+:root {
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Entrance primitives (opacity + transform only = GPU friendly) */
+@keyframes mc-fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes mc-fade-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* One-time light sweep across the CTA once it appears */
+@keyframes mc-shine {
+  from {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  to {
+    transform: translateX(320%) skewX(-18deg);
+  }
+}
+
+/* Extremely slow ambient drift for background orbs */
+@keyframes mc-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(3%, -3%, 0) scale(1.06);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.mc-animate {
+  opacity: 0;
+  animation-duration: 0.62s;
+  animation-timing-function: var(--ease-out-soft);
+  animation-fill-mode: both;
+}
+
+.mc-fade-up {
+  animation-name: mc-fade-up;
+}
+
+.mc-fade-scale {
+  animation-name: mc-fade-scale;
+}
+
+.mc-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    color-mix(in oklch, white 55%, transparent),
+    transparent
+  );
+  transform: translateX(-120%) skewX(-18deg);
+  opacity: 0;
+}
+
+.group:hover .mc-shine,
+.mc-shine.mc-shine-run {
+  opacity: 1;
+  animation: mc-shine 0.9s var(--ease-out-soft) 1;
+}
+
+.mc-orb {
+  animation: mc-drift 18s ease-in-out infinite;
+}
+
+/* Tap ripple that expands from the touch point */
+@keyframes mc-ripple {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+.mc-ripple {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  background: color-mix(in oklch, white 65%, transparent);
+  transform: translate(-50%, -50%) scale(0);
+  animation: mc-ripple 0.6s var(--ease-out-soft) forwards;
+}
+
+/* Quick press-in confirmation on tap/click */
+@keyframes mc-press {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.955);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.mc-press {
+  animation: mc-press 0.24s var(--ease-out-soft);
+}
+
+/* Icon nudge feedback on tap */
+@keyframes mc-pop {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.14);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.mc-pop {
+  animation: mc-pop 0.32s var(--ease-out-soft);
+}
+
+/* Rainbow gradient text for the MultiColours wordmark */
+.mc-rainbow {
+  background-image: linear-gradient(
+    100deg,
+    oklch(0.58 0.25 350),
+    oklch(0.65 0.26 5),
+    oklch(0.72 0.2 55),
+    oklch(0.68 0.19 145),
+    oklch(0.72 0.13 195),
+    oklch(0.6 0.19 250),
+    oklch(0.55 0.26 300)
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: mc-hue 8s ease-in-out infinite alternate;
+}
+
+@keyframes mc-hue {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+/* Per-letter wordmark: staggered drop-in, then a gentle endless bob */
+@keyframes mc-letter-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -0.5em, 0) scale(0.6) rotate(-8deg);
+  }
+  60% {
+    transform: translate3d(0, 0.06em, 0) scale(1.06) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes mc-letter-bob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -0.14em, 0);
+  }
+}
+
+.mc-letter {
+  display: inline-block;
+  opacity: 0;
+  /* drop-in once, then loop a soft bob */
+  animation:
+    mc-letter-in 0.55s var(--ease-out-soft) both,
+    mc-letter-bob 3.6s ease-in-out infinite;
+  /* second animation waits until the drop-in finishes */
+  animation-delay: var(--mc-in-delay, 0ms), var(--mc-bob-delay, 0ms);
+  transition:
+    transform 0.2s var(--ease-out-soft),
+    filter 0.2s var(--ease-out-soft);
+}
+
+/* Desktop hover: pop the hovered letter with a color-matched glow */
+@media (hover: hover) {
+  .mc-letter:hover {
+    transform: translate3d(0, -0.16em, 0) scale(1.18);
+    filter: drop-shadow(0 0 10px currentColor);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mc-animate,
+  .mc-orb,
+  .mc-shine,
+  .mc-ripple,
+  .mc-press,
+  .mc-pop,
+  .mc-rainbow,
+  .mc-letter {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .mc-shine,
+  .mc-ripple {
+    display: none;
+  }
+}
